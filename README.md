@@ -1,4 +1,4 @@
-### freeCodeCamp curriculum projects
+# freeCodeCamp curriculum projects
 
 This repo contains all of the coding projects (challenges) that are part of the freeCodeCamp curriculum which I've finished. I'll update this readme file with the latest modifications or important changes.
 
