@@ -1,12 +1,181 @@
+:root {
+    --dark-tone: #0e0b16;
+    --light-tone: #e7dfdd;
+    --grey-tone: #a5a5a5;
+    --purple-tone: #4717f6;
+    --purple-light-tone: #472DF6;
+    --pink-tone: #a239ca;
+}
+
 html {
     box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px/16px */
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--dark-tone);
+    color: var(--light-tone);
 }
 
 *, *:before, *::after {
     box-sizing: inherit;
+}
+
+footer, #description {
+    margin: 3rem 0 5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > * {
+    max-width: 90vw;
+}
+
+.survey-question {
+    display: flex;
+    flex-direction: column;    
+    padding: 1.4rem .8rem;
+}
+
+/* --- Typograhpy --- */
+body, button {
+    font-size: 1.6rem;
+}
+
+body, button, input, select {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3.2rem;
+    text-align: center;
+    line-height: 3.2rem;
+    color:  var(--light-tone);
+}
+
+p {
+    line-height: 2rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.font-sm {
+    font-size: 1.4rem;
+    color:  var(--light-tone);
+}
+
+::placeholder {
+    font-size: 1.4rem;
+    color:  var(--grey-tone);
+}
+
+/* --- Form input --- */
+form {
+    background-color:  var(--purple-tone);
+    box-shadow: 0 0 1rem .2rem var(--pink-tone);
+}
+
+input, select, textarea {
+    background-color:  var(--purple-light-tone);
+    margin: .8rem 0;
+    padding: .8rem;
+    outline: none;
+    border-radius: .2rem;
+}
+
+input, select {
+    border: none;
+    border-bottom: .1rem solid  var(--light-tone);
+}
+
+input:focus, textarea:focus {
+    background-color: var(--pink-tone);
+}
+
+.sel-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sel-option input {
+    display: none;
+    cursor: pointer;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 .5rem;
+    background-color: var(--light-tone); 
+    border: .1rem solid var(--pink-tone);
+}
+
+.checkmark-rbtn {
+    border-radius: 50%;
+}
+
+.sel-option:hover input  ~ .checkmark {
+    background-color: var(--pink-tone);
+}
+
+.sel-option input:checked ~ .checkmark {
+    background-color: var(--pink-tone);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.ckbx .checkmark:after {
+    width: .5rem;
+    height: 1rem;
+    border: solid var(--light-tone);
+    border-width: 0 .3rem .3rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    margin: .8rem 0 4rem;
+    padding: .4rem 4rem;
+    outline: none;
+    background-color: var(--light-tone);
+    border: .1rem solid var(--pink-tone);
+    border-radius: .2rem;
+    color: var(--dark-tone);
+    box-shadow: 0 0 1rem .1rem var(--pink-tone);
+}
+
+.sel-question {
+    margin: .5rem 0;
 }
