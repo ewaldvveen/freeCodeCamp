@@ -40,103 +40,109 @@ User Story #16: Inside the form element, I am presented with a button with id="s
             <main>
                 <p id='description'>The Lord Of The Rings or Star Wars? No wait, The Godfather of course. But what about The Shawshank Redemption? Picking your all time favorite movie can be tough. Really tough. That's why we let you pick not one but the three movies you love the most.<br><br>Please let us know your top 3 by filling in this short survey.<br><br>Thank you for your time!</p>
                 <form id='survey-form' action='#'>
-                    <div class='survey-question'>
-                        <label id='name-label' for='name'>Name</label>
-                        <input type='text' id='name' class='font-sm' name='name' placeholder='Please enter your name' required>
+                    <div class='personal'>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-info' id='name-label' for='name'>Name</label>
+                            <input type='text' id='name' class='font-sm' name='name' placeholder='Please enter your name' required>
+                        </div>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-info' id='email-label' for='email'>Email</label>
+                            <input type='email' id='email' class='font-sm' name='email' placeholder='Please enter your email address' required>
+                        </div>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-info' id='number-label' for='number'>Age</label>
+                            <input type='number' id='number' class='font-sm' name='age' placeholder='Please enter your age' min='16' max='130' required>
+                        </div>  
+                    </div>                                      
+                    <div class='movie'>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-fav' id='genre-label' for='dropdown'>What's your favorite movie genre?</label>
+                            <select id='dropdown' class='font-sm' name='genre'>
+                                <option class='option-disabled' disabled value selected='selected'>Select an option</option>
+                                <option value='comedy'>Comedy</option>
+                                <option value='action'>Action</option>
+                                <option value='thriller'>Thriller</option>
+                                <option value='horror'>Horror</option>
+                                <option value='drama'>Drama</option>
+                                <option value='other'>Other</option>
+                            </select>
+                        </div>
+                        <div class='survey-question'>
+                            <fieldset>
+                                <legend id='number-label' for='radio'>How many movies do you watch per week?</legend>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option' for='zeroToOne'>
+                                        <input id='zeroToOne' class='custom-radio' name='numMovies' type='radio' value='1'>
+                                        <span class='checkmark checkmark-rbtn'></span>0 - 1 movies
+                                    </label>
+                                </div>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option' for='OneToThree'>
+                                        <input id='OneToThree' name='numMovies' type='radio' value='2'>
+                                        <span class='checkmark checkmark-rbtn'></span>1 - 3 movies
+                                    </label>
+                                </div>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option' for='moreThanThree'>
+                                        <input id='moreThanThree' name='numMovies' type='radio' value='3'>
+                                        <span class='checkmark checkmark-rbtn'></span>More than 3 movies
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div> 
+                        <div class='survey-question'>
+                            <fieldset>                            
+                                <legend id='resources-label' for='resources'>Which resources do you check before watching a movie?</legend>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option ckbx' for='imdb'>
+                                        <input id='imdb' name='movieRes' type='checkbox' value='1'>
+                                        <span class='checkmark'></span>IMDB
+                                    </label>
+                                </div>                                
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option ckbx' for='rotten'>
+                                        <input id='rotten' name='movieRes' type='checkbox' value='2'>
+                                        <span class='checkmark'></span>Rotten Tomatoes
+                                    </label>
+                                </div>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option ckbx' for='meta'>
+                                        <input id='meta' name='movieRes' type='checkbox' value='3'>
+                                        <span class='checkmark'></span>Metacritic
+                                    </label>
+                                </div>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option ckbx' for='other'>
+                                        <input id='other' name='movieRes' type='checkbox' value='4'>
+                                        <span class='checkmark'></span>Other resources
+                                    </label>
+                                </div>
+                                <div class='sel-question font-sm'>
+                                    <label class='sel-option ckbx' for='none'>
+                                        <input id='none' name='movieRes' type='checkbox' value='5'>
+                                        <span class='checkmark'></span>None of the above
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-movie' id='firstMovie-label' for='movieOne'>My first favorite movie</label>
+                            <input type='text' id='movieOne' class='font-sm' name='favMovies' placeholder='The obvious one' required>
+                        </div>
+                        <div class='survey-question txt-qtn'>    
+                            <label class='txt-movie' id='secondMovie-label' for='movieSec'>My second favorite movie</label>
+                            <input type='text' id='movieSec' class='font-sm' name='favMovies' placeholder='The one that made you cry' required>
+                        </div>
+                        <div class='survey-question txt-qtn'>
+                            <label class='txt-movie' id='thirdMovie-label' for='movieThree'>My last favorite movie</label>
+                            <input type='text' id='movieThree' class='font-sm' name='favMovies' placeholder='And last, but not least' required>
+                        </div>
                     </div>
-                    <div class='survey-question'>
-                        <label id='email-label' for='email'>Email</label>
-                        <input type='email' id='email' class='font-sm' name='email' placeholder='Please enter your email address' required>
-                    </div>
-                    <div class='survey-question'>
-                        <label id='number-label' for='number'>Age</label>
-                        <input type='number' id='number' class='font-sm' name='age' placeholder='Please enter your age' min='16' max='130' required>
-                    </div>
-                    <div class='survey-question'>
-                        <label id='genre-label' for='dropdown'>What's your favorite movie genre?</label>
-                        <select id='dropdown' class='font-sm' name='genre'>
-                            <option class='option-disabled' disabled value selected='selected'>Select an option</option>
-                            <option value='comedy'>Comedy</option>
-                            <option value='action'>Action</option>
-                            <option value='thriller'>Thriller</option>
-                            <option value='horror'>Horror</option>
-                            <option value='drama'>Drama</option>
-                            <option value='other'>Other</option>
-                        </select>
-                    </div>
-                    <div class='survey-question'>
-                        <fieldset>
-                            <legend id='number-label' for='radio'>How many movies do you watch per week?</legend>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option' for='zeroToOne'>
-                                    <input id='zeroToOne' class='custom-radio' name='numMovies' type='radio' value='1'>
-                                    <span class='checkmark checkmark-rbtn'></span>0 - 1 movies
-                                </label>
-                            </div>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option' for='OneToThree'>
-                                    <input id='OneToThree' name='numMovies' type='radio' value='2'>
-                                    <span class='checkmark checkmark-rbtn'></span>1 - 3 movies
-                                </label>
-                            </div>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option' for='moreThanThree'>
-                                    <input id='moreThanThree' name='numMovies' type='radio' value='3'>
-                                    <span class='checkmark checkmark-rbtn'></span>More than 3 movies
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div> 
-                    <div class='survey-question'>
-                        <fieldset>                            
-                            <legend id='resources-label' for='resources'>Which resources do you check before watching a movie?</legend>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option ckbx' for='imdb'>
-                                    <input id='imdb' name='movieRes' type='checkbox' value='1'>
-                                    <span class='checkmark'></span>IMDB
-                                </label>
-                            </div>                                
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option ckbx' for='rotten'>
-                                    <input id='rotten' name='movieRes' type='checkbox' value='2'>
-                                    <span class='checkmark'></span>Rotten Tomatoes
-                                </label>
-                            </div>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option ckbx' for='meta'>
-                                    <input id='meta' name='movieRes' type='checkbox' value='3'>
-                                    <span class='checkmark'></span>Metacritic
-                                </label>
-                            </div>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option ckbx' for='other'>
-                                    <input id='other' name='movieRes' type='checkbox' value='4'>
-                                    <span class='checkmark'></span>Other resources
-                                </label>
-                            </div>
-                            <div class='sel-question font-sm'>
-                                <label class='sel-option ckbx' for='none'>
-                                    <input id='none' name='movieRes' type='checkbox' value='5'>
-                                    <span class='checkmark'></span>None of the above
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class='survey-question'>
-                        <label id='firstMovie-label' for='movieOne'>My first favorite movie</label>
-                        <input type='text' id='movieOne' class='font-sm' name='favMovies' placeholder='The obvious one' required>
-                    </div>
-                    <div class='survey-question'>    
-                        <label id='secondMovie-label' for='movieSec'>My second favorite movie</label>
-                        <input type='text' id='movieSec' class='font-sm' name='favMovies' placeholder='The one that made you cry' required>
-                    </div>
-                    <div class='survey-question'>
-                        <label id='thirdMovie-label' for='movieThree'>My last favorite movie</label>
-                        <input type='text' id='movieThree' class='font-sm' name='favMovies' placeholder='And last, but not least' required>
-                    </div>
-                    <div class='survey-question'>
-                        <label id='feedback-label' for='feedback'>Do you have any feedback for us?</label>  
-                        <textarea id='feedback' class='font-sm' name='fb' rows='6' placeholder='We would love to hear from you!'></textarea>
+                    <div class='personal'>
+                        <div class='survey-question'>
+                            <label id='feedback-label' for='feedback'>Do you have any feedback for us?</label>  
+                            <textarea id='feedback' class='font-sm' name='fb' rows='6' placeholder='We would love to hear from you!'></textarea>
+                        </div>
                     </div>
                     <div class='btn center'>
                         <button id='submit' type='submit'>Submit</button>

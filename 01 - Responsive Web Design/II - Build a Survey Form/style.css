@@ -4,7 +4,7 @@
     --grey-tone: #a5a5a5;
     --purple-tone: #4717f6;
     --purple-light-tone: #472DF6;
-    --pink-tone: #a239ca;
+    --pink-tone: #a139ca;
 }
 
 html {
@@ -29,6 +29,8 @@ h1, main, footer, #description {
 
 h1 {
     margin-top: 5rem;
+    text-shadow: 0 0 .6rem var(--pink-tone),
+    0 0 4rem rgba(231, 223, 221, 0.7);
 }
 
 .container {
@@ -41,10 +43,14 @@ h1 {
     max-width: 90vw;
 }
 
-.survey-question {
-    display: flex;
-    flex-direction: column;    
-    padding: 1.4rem .8rem;
+.personal, .movie {
+    padding: 2rem 0;
+}
+
+.movie {
+    background-color: var(--purple-light-tone);
+    border-top: .1rem solid var(--light-tone);
+    border-bottom: .1rem solid var(--light-tone);
 }
 
 /* --- Typograhpy --- */
@@ -52,7 +58,7 @@ body, button {
     font-size: 1.6rem;
 }
 
-body, button, input, select {
+body, button, input, select, textarea {
     font-family: 'Lato', sans-serif;
 }
 
@@ -93,6 +99,12 @@ footer {
     border: .1rem solid var(--light-tone);
 }
 
+.survey-question {
+    display: flex;
+    flex-direction: column;    
+    padding: 1.4rem .8rem;
+}
+
 #dropdown option {
     background-color: var(--pink-tone);
     color: var(--light-tone);
@@ -102,8 +114,17 @@ footer {
     color: var(--grey-tone);
 }
 
-input, select, textarea {
-    background-color:  var(--purple-light-tone);
+.sel-question {
+    margin: .5rem 0;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input, select, textarea {    
     margin: .8rem 0;
     padding: .8rem;
     outline: none;
@@ -115,8 +136,16 @@ input, select {
     border-bottom: .1rem solid  var(--light-tone);
 }
 
-input:focus, textarea:focus {
+.personal input:focus, .personal textarea:focus, .movie input:focus {
     background-color: var(--pink-tone);
+}
+
+.personal input, .personal textarea {
+    background-color:  var(--purple-light-tone);
+}
+
+.movie input, .movie select {
+    background-color:  var(--purple-tone);
 }
 
 .sel-option {
@@ -173,12 +202,6 @@ input:focus, textarea:focus {
     transform: rotate(45deg);
 }
 
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
 #submit {
     margin: .8rem 0 4rem;
     padding: .4rem 4rem;
@@ -189,6 +212,69 @@ fieldset {
     color: var(--light-tone);
 }
 
-.sel-question {
-    margin: .5rem 0;
+@media (min-width: 48em) {
+    .container > * {
+        max-width: 80vw;
+    }
+
+    .personal, .movie {
+        padding: 4rem 0;
+    }
+
+    /* --- Typograhpy --- */
+    body, button {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        line-height: 2.2rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+
+    .font-sm {
+        font-size: 1.6rem;
+    }
+
+    ::placeholder {
+        font-size: 1.6rem;
+    }
+
+    /* --- Form input --- */
+    .survey-question {
+        padding: 1.4rem 2.6rem;
+    }
+    
+    .txt-qtn {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .txt-info {
+        width: 10%;
+    }
+
+    .txt-fav {
+        width: 50%;
+    }
+
+    .txt-movie {
+        width: 40%;
+    }
+
+    .txt-qtn > input, .txt-qtn > select {
+        flex: 1;
+    }
+
+    #submit {
+        margin-bottom: 8rem;
+    }
 }
