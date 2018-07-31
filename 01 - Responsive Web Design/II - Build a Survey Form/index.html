@@ -35,27 +35,27 @@ User Story #16: Inside the form element, I am presented with a button with id="s
     <body>
         <div class='container'>
             <header>
-                <h1 id='title'>My Top 3<br>Favorite Movies</h1>
+                <h1 id='title'>My&nbsp;Top&nbsp;3 Favorite&nbsp;Movies</h1>
             </header>
             <main>
                 <p id='description'>The Lord Of The Rings or Star Wars? No wait, The Godfather of course. But what about The Shawshank Redemption? Picking your all time favorite movie can be tough. Really tough. That's why we let you pick not one but the three movies you love the most.<br><br>Please let us know your top 3 by filling in this short survey.<br><br>Thank you for your time!</p>
                 <form id='survey-form' action='#'>
                     <div class='survey-question'>
-                        <label id='name-label' for='name'>Name:</label>
+                        <label id='name-label' for='name'>Name</label>
                         <input type='text' id='name' class='font-sm' name='name' placeholder='Please enter your name' required>
                     </div>
                     <div class='survey-question'>
-                        <label id='email-label' for='email'>Email:</label>
+                        <label id='email-label' for='email'>Email</label>
                         <input type='email' id='email' class='font-sm' name='email' placeholder='Please enter your email address' required>
                     </div>
                     <div class='survey-question'>
-                        <label id='number-label' for='number'>Age:</label>
+                        <label id='number-label' for='number'>Age</label>
                         <input type='number' id='number' class='font-sm' name='age' placeholder='Please enter your age' min='16' max='130' required>
                     </div>
                     <div class='survey-question'>
                         <label id='genre-label' for='dropdown'>What's your favorite movie genre?</label>
                         <select id='dropdown' class='font-sm' name='genre'>
-                            <option disabled value selected='selected'>Select an option</option>
+                            <option class='option-disabled' disabled value selected='selected'>Select an option</option>
                             <option value='comedy'>Comedy</option>
                             <option value='action'>Action</option>
                             <option value='thriller'>Thriller</option>

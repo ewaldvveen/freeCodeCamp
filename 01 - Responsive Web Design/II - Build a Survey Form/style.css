@@ -23,8 +23,12 @@ body {
     box-sizing: inherit;
 }
 
-footer, #description {
-    margin: 3rem 0 5rem;
+h1, main, footer, #description {
+    margin: 0 0 5rem;
+}
+
+h1 {
+    margin-top: 5rem;
 }
 
 .container {
@@ -83,9 +87,19 @@ footer {
 }
 
 /* --- Form input --- */
-form {
+#survey-form {
     background-color:  var(--purple-tone);
     box-shadow: 0 0 1rem .2rem var(--pink-tone);
+    border: .1rem solid var(--light-tone);
+}
+
+#dropdown option {
+    background-color: var(--pink-tone);
+    color: var(--light-tone);
+}
+
+#dropdown .option-disabled {
+    color: var(--grey-tone);
 }
 
 input, select, textarea {
@@ -165,15 +179,14 @@ fieldset {
     margin: 0;
 }
 
-button {
+#submit {
     margin: .8rem 0 4rem;
     padding: .4rem 4rem;
     outline: none;
-    background-color: var(--light-tone);
-    border: .1rem solid var(--pink-tone);
+    background-color: var(--pink-tone);
+    border: .1rem solid var(--light-tone);
     border-radius: .2rem;
-    color: var(--dark-tone);
-    box-shadow: 0 0 1rem .1rem var(--pink-tone);
+    color: var(--light-tone);
 }
 
 .sel-question {
