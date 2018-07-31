@@ -15,6 +15,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background: url(https://github.com/ewaldvveen/freeCodeCamp/blob/master/01%20-%20Responsive%20Web%20Design/II%20-%20Build%20a%20Survey%20Form/Images/bgr-pattern.png?raw=true);
     background-color: var(--dark-tone);
     color: var(--light-tone);
 }
