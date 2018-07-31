@@ -279,3 +279,31 @@ input, select {
         margin-bottom: 8rem;
     }
 }
+
+@media(min-width: 64em) {
+    .container > * {
+        max-width: 60vw;
+    }
+
+    /* --- Typograhpy --- */
+    h1 {
+        font-size: 4.8rem;
+    }
+}
+
+@media(min-width: 85.375em) {
+    .container > * {
+        max-width: 50vw;
+    }/
+}
+
+@media(min-width: 120em) {
+    .container > * {
+        max-width: 40vw;
+    }
+
+    /* -- Form input --- */
+    .txt-fav, .txt-movie {
+        width: 40%;
+    }
+}
