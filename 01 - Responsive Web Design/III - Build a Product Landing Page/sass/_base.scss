@@ -1,0 +1,30 @@
+// COLOR VARIABLES
+$color-primary: '#cae4db';
+$color-secondary: '#dcae1d';
+$color-dark: '#00303f';
+$color-light: '#7a9d96';
+
+// FONT VARIABLES
+$font-primary: 'Montserrat', sans-serif;
+$font-display: 'Raleway', sans-serif;
+
+// GLOBAL SETTINGS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-dark;
+    font-weight: 300;
+    line-height: 1.6;
+}
