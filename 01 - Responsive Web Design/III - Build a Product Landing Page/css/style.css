@@ -11,6 +11,38 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: "#00303f";
+  color: #00303f;
   font-weight: 300;
   line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.company {
+  background-color: #00303f;
+  grid-column: full-start / full-end; }
+
+.footer {
+  background-color: #00303f;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-color: #00303f;
+  grid-column: full-start / full-end; }
+
+.products {
+  grid-column: center-start / col-end 5; }
+
+.subscription {
+  background-color: #7a9d96;
+  grid-column: col-start 5 / center-end; }
+
+.testimonials {
+  background-color: #7a9d96;
+  grid-column: center-start / col-end 4; }
+
+.videos {
+  background-color: #cae4db;
+  grid-column: col-start 6 / center-end; }

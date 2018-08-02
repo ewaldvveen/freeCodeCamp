@@ -1,8 +1,8 @@
 // COLOR VARIABLES
-$color-primary: '#cae4db';
-$color-secondary: '#dcae1d';
-$color-dark: '#00303f';
-$color-light: '#7a9d96';
+$color-primary:#7a9d96;
+$color-secondary: #dcae1d;
+$color-dark: #00303f;
+$color-light: #cae4db;
 
 // FONT VARIABLES
 $font-primary: 'Montserrat', sans-serif;
@@ -27,4 +27,10 @@ body {
     color: $color-dark;
     font-weight: 300;
     line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 10vh repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
