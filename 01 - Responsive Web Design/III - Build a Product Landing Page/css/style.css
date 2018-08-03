@@ -22,7 +22,10 @@ body {
 
 .company {
   background-color: #00303f;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: flex;
+  justify-content: center;
+  color: #ffffff; }
 
 .footer {
   background-color: #00303f;

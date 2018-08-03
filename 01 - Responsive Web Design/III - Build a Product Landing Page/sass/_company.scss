@@ -1,4 +1,8 @@
 .company {
     background-color: $color-dark;
     grid-column: full-start / full-end;
+    display: flex;
+    justify-content: center;
+
+    color: $color-white;
 }
