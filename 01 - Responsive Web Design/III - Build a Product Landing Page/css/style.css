@@ -18,14 +18,34 @@ body {
 .container {
   display: grid;
   grid-template-rows: 10vh repeat(3, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Raleway", sans-serif; }
+
+.heading-4 {
+  font-size: 1.8rem; }
 
 .company {
   background-color: #00303f;
   grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  grid-gap: 6rem;
+  color: #ffffff;
+  padding: 3rem; }
+
+.info {
   display: flex;
-  justify-content: center;
-  color: #ffffff; }
+  flex-direction: column; }
+  .info__icon {
+    fill: #ffffff;
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+    margin: 3rem 0; }
+  .info__text {
+    font-size: 1.6rem; }
 
 .footer {
   background-color: #00303f;
@@ -36,7 +56,14 @@ body {
   grid-column: full-start / full-end; }
 
 .products {
-  grid-column: center-start / col-end 5; }
+  grid-column: center-start / col-end 5;
+  margin: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.product {
+  background-color: #cae4db; }
 
 .subscription {
   background-color: #7a9d96;

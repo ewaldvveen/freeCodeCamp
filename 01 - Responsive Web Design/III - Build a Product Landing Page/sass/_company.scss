@@ -1,8 +1,26 @@
 .company {
     background-color: $color-dark;
     grid-column: full-start / full-end;
-    display: flex;
-    justify-content: center;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    grid-gap: 6rem;
     color: $color-white;
+    padding: 3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    &__icon {
+        fill: $color-white;
+        width: 5rem;
+        height: 5rem;
+        align-self: center;
+        margin: 3rem 0;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
 }
