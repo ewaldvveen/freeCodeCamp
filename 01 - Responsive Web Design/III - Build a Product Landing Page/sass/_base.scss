@@ -8,15 +8,26 @@ $color-font-main: #ffffff;
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div,
+img,
+ul,
+li,
+aside,
+section,
+footer {
+  padding: 1rem;
+  border: 0.1rem solid $color-font-main;
 }

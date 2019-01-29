@@ -10,3 +10,44 @@ html {
 
 body {
   box-sizing: border-box; }
+
+div,
+img,
+ul,
+li, aside, section, footer {
+  padding: 1rem;
+  border: 0.1rem solid #ffffff; }
+
+body {
+  font-size: 3rem; }
+
+.about {
+  background-color: #fc4a1a; }
+  .about__item {
+    background-color: #f7b733; }
+
+.contact-form {
+  background-color: #4abdac; }
+
+.feature-action {
+  background-color: #fc4a1a; }
+
+.feature-new {
+  background-color: #f7b733; }
+  .feature-new__item {
+    background-color: #4abdac; }
+
+.footer {
+  background-color: #fc4a1a; }
+
+.header {
+  background-color: #fc4a1a; }
+  .header__logo {
+    background-color: #f7b733; }
+  .header__nav {
+    background-color: #4abdac; }
+    .header__nav-item {
+      background-color: #dfdce3; }
+
+.video {
+  background-color: #dfdce3; }

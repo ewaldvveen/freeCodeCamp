@@ -1,0 +1,15 @@
+.header {
+    background-color: $color-primary;
+
+    &__logo {
+        background-color: $color-secundary;
+    }
+
+    &__nav {
+        background-color: $color-tertiairy;
+
+        &-item {
+            background-color: $color-grey;
+        }
+    }
+}
