@@ -1,0 +1,13 @@
+{
+  "name": "futsal_webshop",
+  "version": "1.0.0",
+  "description": "Example product page using only HTML and CSS (Flexbox and Grid)",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Ewald van Veen",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

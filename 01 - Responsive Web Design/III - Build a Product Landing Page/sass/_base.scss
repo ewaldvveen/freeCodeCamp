@@ -1,0 +1,22 @@
+// COLOR VARIABLES
+$color-primary: #fc4a1a;
+$color-secundary: #f7b733;
+$color-tertiairy: #4abdac;
+$color-grey: #dfdce3;
+$color-font-main: #ffffff;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
