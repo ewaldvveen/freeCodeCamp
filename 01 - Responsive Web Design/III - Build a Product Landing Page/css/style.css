@@ -35,12 +35,11 @@ body {
 .contact-form {
   background-color: #4abdac; }
 
-.feature-action {
+.features {
   background-color: #fc4a1a; }
-
-.feature-new {
-  background-color: #f7b733; }
-  .feature-new__item {
+  .features-highlighted__item {
+    background-color: #f7b733; }
+  .features-new__item {
     background-color: #4abdac; }
 
 .footer {

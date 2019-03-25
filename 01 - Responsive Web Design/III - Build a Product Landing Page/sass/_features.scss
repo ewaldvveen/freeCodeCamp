@@ -1,11 +1,11 @@
-.feature-action {
-    background-color: $color-primary;
-}
+.features {
+  background-color: $color-primary;
 
-.feature-new {
+  &-highlighted__item {
     background-color: $color-secundary;
+  }
 
-    &__item {
-        background-color: $color-tertiairy;
-    }
+  &-new__item {
+    background-color: $color-tertiairy;
+  }
 }
