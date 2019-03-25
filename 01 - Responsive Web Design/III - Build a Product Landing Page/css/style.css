@@ -11,10 +11,16 @@ html {
 body {
   box-sizing: border-box; }
 
+.container {
+  display: grid; }
+
 div,
 img,
 ul,
-li, aside, section, footer {
+li,
+aside,
+section,
+footer {
   padding: 1rem;
   border: 0.1rem solid #ffffff; }
 
