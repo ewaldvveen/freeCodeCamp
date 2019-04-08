@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    display: grid;
+  display: grid;
 }
 
 div,
@@ -34,4 +34,18 @@ section,
 footer {
   padding: 1rem;
   border: 0.1rem solid $color-font-main;
+}
+
+.skip-link {
+  position: absolute;
+  top: -400px;
+  left: 0;
+  background: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }

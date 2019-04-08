@@ -17,41 +17,79 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header id="header" class="header">
         HEADER
-        <div class="header__logo">
+        <div id="header-img" class="header__logo">
           LOGO
-          <img
-            class="header__logo-img"
-            src="#"
-            alt="Corportate logo showing a pair of futsal shoes"
-          />
+          <picture>
+            <source
+              srcset="
+                img\futsal-factory-logo--large.png         960w,
+                img\futsal-factory-logo--large-hi-dpi.png 1920w
+              "
+              media="(min-width:1366px)"
+            />
+            <source
+              srcset="
+                img\futsal-factory-logo--middle.png         683w,
+                img\futsal-factory-logo--middle-hi-dpi.png 1366w
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                img\futsal-factory-logo--small.png        384w,
+                img\futsal-factory-logo--small-hi-dpi.png 768w
+              "
+              media="(min-width:667px)"
+            />
+            <img
+              class="header__logo-img"
+              srcset="
+                img\futsal-factory-logo--smaller.png        334w,
+                img\futsal-factory-logo--smaller-hi-dpi.png 667w
+              "
+              alt="Corporate logo showing a pair of futsal shoes"
+            />
+          </picture>
         </div>
-        <nav class="header__nav">
+        <a href="#maincontent" class="skip-link">Skip to main content</a>
+        <nav id="nav-bar" class="header__nav">
           MENU
           <ul class="header__nav-list">
-            <li class="header__nav-item">MENU-ITEM-1</li>
-            <li class="header__nav-item">MENU-ITEM-2</li>
-            <li class="header__nav-item">MENU-ITEM-3</li>
+            <li class="nav-link header__nav-item">
+              <a href="#features">Features</a>
+            </li>
+            <li class="nav-link header__nav-item">
+              <a href="#about">Our Unique Selling Points</a>
+            </li>
+            <li class="nav-link header__nav-item">
+              <a href="#form">Contact</a>
+            </li>
           </ul>
         </nav>
       </header>
       <div>
         <h1>Futsal Webshop</h1>
-        <section class="features">
+        <section id="features" class="features">
           <h2>Features</h2>
-          <div class="features-highlighted__item">HIGHLIGHTED-ITEM</div>
+          <div class="features-highlighted__item">
+            <h3>In the spotlights</h3>
+          </div>
           <div class="features-new__item">NEW-ITEM-1</div>
           <div class="features-new__item">NEW-ITEM-2</div>
           <div class="features-new__item">NEW-ITEM-3</div>
         </section>
-        <aside class="video">
+        <aside id="video" class="video">
           <h2>Futsal Video's</h2>
         </aside>
-        <main>
-          <section class="about">
+        <main id="maincontent" tabindex="-1">
+          <section id="about" class="about">
             <h2>Our Unique Selling Points</h2>
             <article class="about__item">
+              <svg class="info__icon">
+                <use xlink:href="img/sprite.svg#icon-shop"></use>
+              </svg>
               <h3>Unique pick up service</h3>
               <p>
                 You know that feeling where you're waiting all day for the
@@ -63,6 +101,9 @@
               </p>
             </article>
             <article class="about__item">
+              <svg class="info__icon">
+                <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
+              </svg>
               <h3>Happy customers guaranteed</h3>
               <p>
                 We offer a lifetime money-back guarantee. We know how
@@ -75,6 +116,9 @@
               </p>
             </article>
             <article class="about__item">
+              <svg class="info__icon">
+                <use xlink:href="img/sprite.svg#icon-wallet"></use>
+              </svg>
               <h3>Highest price alert</h3>
               <p>
                 Everybody knows that when it comes to showing off a brand new
@@ -87,6 +131,9 @@
               </p>
             </article>
             <article class="about__item">
+              <svg class="info__icon">
+                <use xlink:href="img/sprite.svg#icon-rocket"></use>
+              </svg>
               <h3>Living on the moon? No problem.</h3>
               <p>
                 Are you in the situation that you're not sure if you should move
@@ -99,14 +146,23 @@
             </article>
           </section>
         </main>
-        <form class="contact-form">
+        <form
+          id="form"
+          class="contact-form"
+          action="https://www.freecodecamp.com/email-submit"
+        >
           <p>
             Would you like us to inform you on a daily base about all the new
             stuff and our best discount offers? Of course you do! Fill in this
             short form and we'll keep you updated. All the time.
           </p>
           <label>Name<input type="text"/></label>
-          <label>Email<input type="email"/></label>
+          <label
+            >Email<input
+              id="email"
+              type="email"
+              placeholder="Please enter your email address"
+          /></label>
           <fieldset>
             <legend>How did you find this site?</legend>
             <label name="find"
@@ -125,7 +181,7 @@
               ><input type="radio" for="find" />I'd rather not say.</label
             >
           </fieldset>
-          <button type="submit">Yes, please!</button>
+          <button id="submit" type="submit">Yes, please!</button>
         </form>
       </div>
       <footer class="footer">FOOTER</footer>
