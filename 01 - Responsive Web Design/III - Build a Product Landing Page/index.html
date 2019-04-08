@@ -75,13 +75,127 @@
           <h2>Features</h2>
           <div class="features-highlighted__item">
             <h3>In the spotlights</h3>
+            <picture>
+              <source
+                srcset="
+                  img\spotlight-shoe--large.jpg          1280w,
+                  img\spotlight-shoe--large-high-dpi.jpg  640w
+                "
+                media="(min-width:1366px)"
+              />
+              <source
+                srcset="
+                  img\spotlight-shoe--middle.jpg          455w,
+                  img\spotlight-shoe--middle-high-dpi.jpg 911w
+                "
+                media="(min-width:768px)"
+              />
+              <img
+                class="header__logo-img"
+                srcset="
+                  img\spotlight-shoe--small.jpg          256w,
+                  img\spotlight-shoe--small-high-dpi.jpg 512w
+                "
+                alt="Corporate logo showing a pair of futsal shoes"
+              />
+            </picture>
+            <p>Nike Mercurial Victory V</p>
           </div>
-          <div class="features-new__item">NEW-ITEM-1</div>
-          <div class="features-new__item">NEW-ITEM-2</div>
-          <div class="features-new__item">NEW-ITEM-3</div>
+          <div class="features-new__item">
+            <h3>Feature-1</h3>
+            <picture>
+              <source
+                srcset="
+                  img\shoe-1--large.jpg          1280w,
+                  img\shoe-1--large-high-dpi.jpg  640w
+                "
+                media="(min-width:1366px)"
+              />
+              <source
+                srcset="
+                  img\shoe-1--middle.jpg          455w,
+                  img\shoe-1--middle-high-dpi.jpg 911w
+                "
+                media="(min-width:768px)"
+              />
+              <img
+                class="header__logo-img"
+                srcset="
+                  img\shoe-1--small.jpg          256w,
+                  img\shoe-1--small-high-dpi.jpg 512w
+                "
+                alt="Corporate logo showing a pair of futsal shoes"
+              />
+            </picture>
+            <p>Nike Mercurial Victory V CR7</p>
+          </div>
+          <div class="features-new__item">
+            <h3>Feature-2</h3>
+            <picture>
+              <source
+                srcset="
+                  img\shoe-2--large.jpg          1280w,
+                  img\shoe-2--large-high-dpi.jpg  640w
+                "
+                media="(min-width:1366px)"
+              />
+              <source
+                srcset="
+                  img\shoe-2--middle.jpg          455w,
+                  img\shoe-2--middle-high-dpi.jpg 911w
+                "
+                media="(min-width:768px)"
+              />
+              <img
+                class="header__logo-img"
+                srcset="
+                  img\shoe-2--small.jpg          256w,
+                  img\shoe-2--small-high-dpi.jpg 512w
+                "
+                alt="Corporate logo showing a pair of futsal shoes"
+              />
+            </picture>
+            <p>Nike MercurialX Proximo IC</p>
+          </div>
+          <div class="features-new__item">
+            <h3>Feature-3</h3>
+            <picture>
+              <source
+                srcset="
+                  img\shoe-3--large.jpg          1280w,
+                  img\shoe-3--large-high-dpi.jpg  640w
+                "
+                media="(min-width:1366px)"
+              />
+              <source
+                srcset="
+                  img\shoe-3--middle.jpg          455w,
+                  img\shoe-3--middle-high-dpi.jpg 911w
+                "
+                media="(min-width:768px)"
+              />
+              <img
+                class="header__logo-img"
+                srcset="
+                  img\shoe-3--small.jpg          256w,
+                  img\shoe-3--small-high-dpi.jpg 512w
+                "
+                alt="Corporate logo showing a pair of futsal shoes"
+              />
+            </picture>
+            <p>Adidas Messi 15.3</p>
+          </div>
         </section>
         <aside id="video" class="video">
           <h2>Futsal Video's</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/zareSoM8kLU"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </aside>
         <main id="maincontent" tabindex="-1">
           <section id="about" class="about">
@@ -184,7 +298,24 @@
           <button id="submit" type="submit">Yes, please!</button>
         </form>
       </div>
-      <footer class="footer">FOOTER</footer>
+      <footer class="footer">
+        <p>
+          If the information on this page sounds too good to be true, it
+          probably is.
+        </p>
+        <p>
+          This page is built by
+          <a href="https://www.linkedin.com/in/ewaldvanveen/" target="_blank"
+            >Ewald van Veen</a
+          >
+          and is part of the
+          <a href="https://www.freecodecamp.org" target="_blank"
+            >freeCodeCamp</a
+          >
+          responsive web design projects curriculum.
+        </p>
+        <p>2019 - copyright © by Ewald van Veen.</p>
+      </footer>
     </div>
   </body>
 </html>
