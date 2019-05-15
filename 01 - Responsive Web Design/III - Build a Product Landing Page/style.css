@@ -1,0 +1,15 @@
+/* Hiding a link that people using screen reader can use to
+navigate directly to the main content of the page */
+.skip-link {
+    position: absolute;
+    top: -400px;
+    left: 0;
+    background: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
