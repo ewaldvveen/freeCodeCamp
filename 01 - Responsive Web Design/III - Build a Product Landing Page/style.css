@@ -1,15 +1,114 @@
+/* Defining CSS variables, globally scoped */
+:root {
+  /* colors */
+  --color-primary: #fc4a1a;
+  --color-secundary: #f7b733;
+  --color-tertiairy: #4abdac;
+  --color-grey: #dfdce3;
+  --color-txt-dark: #333333;
+  --color-txt-light: #ffffff;
+
+  /* fonts */
+  --font-size-xxl: 4.8rem;
+  --font-size-xl: 3.6rem;
+  --font-size-l: 2.8rem;
+  --font-size-medium: 1.6rem;
+}
+
+/* CSS reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  background-repeat: no-repeat;
+}
+
+*::selection {
+  background: var(--color-primary);
+  color: var(--color-txt-light);
+}
+
+
+/* General styles for the whole page */
+html {
+  font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: var(--font-size-medium);
+  color: var(--color-txt-dark);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-l);
+}
+
+div,
+img,
+ul,
+li,
+aside,
+section,
+footer {
+  border: 0.1rem solid red;
+}
+
+/* Container div */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container * {
+  flex: 1 1 100%;
+}
+
+/* Styles for hiding parts of the page */
+
 /* Hiding a link that people using screen reader can use to
 navigate directly to the main content of the page */
 .skip-link {
-    position: absolute;
-    top: -400px;
-    left: 0;
-    background: #bf1722;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-  }
+  position: absolute;
+  top: -400px;
+  left: 0;
+  background: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+top: 0;
+}
+
+/* Hiding an element for humans, but not for screen readers */
+.hidden-element {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
   
-  .skip-link:focus {
-    top: 0;
-  }
+.hidden-element:active, .hidden-element:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+}
