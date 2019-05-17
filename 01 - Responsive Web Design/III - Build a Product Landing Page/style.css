@@ -71,8 +71,29 @@ footer {
   flex-direction: column;
 }
 
-.container * {
-  flex: 1 1 100%;
+/* Header */
+#header {
+  display: flex;
+}
+
+#header * {
+  flex: 3;
+}
+
+#header-img {
+  background-color: var(--color-primary);
+}
+
+#nav-bar {
+  flex: 2;
+}
+
+#nav-bar ul {
+  display: flex;
+}
+
+.nav-link {
+  background-color: var(--color-secundary);
 }
 
 /* Styles for hiding parts of the page */
@@ -111,4 +132,13 @@ top: 0;
   margin: 0;
   overflow: visible;
   position: static;
+}
+
+/* Media queries */
+
+/* tablets: 64 * 16 = 1024px */
+@media all and (max-width: 64em) {
+  #header {
+    flex-direction: column;
+  }
 }
