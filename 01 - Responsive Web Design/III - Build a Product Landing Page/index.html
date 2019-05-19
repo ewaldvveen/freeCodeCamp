@@ -19,32 +19,71 @@
 <body>
     <div class="container">
         <header id="header">
-            <div id="header-img">logo</div>
+            <div id="header-img">
+                <picture>
+                    <source
+                        srcset="
+                        img\futsal-factory-logo--large.png         960w,
+                        img\futsal-factory-logo--large-hi-dpi.png 1920w
+                        "
+                        media="(min-width:1024px)"
+                    />
+                    <source
+                        srcset="
+                        img\futsal-factory-logo--middle.png         683w,
+                        img\futsal-factory-logo--middle-hi-dpi.png 1366w
+                        "
+                        media="(min-width:414px)"
+                    />
+                    <img
+                        srcset="
+                        img\futsal-factory-logo--small.png        384w,
+                        img\futsal-factory-logo--small-hi-dpi.png 768w
+                        "
+                        alt="Corporate logo showing a pair of futsal shoes"
+                    />
+                    </picture>
+            </div>
             <a href="#maincontent" class="skip-link">Skip to main content</a>
             <nav id="nav-bar">
                 <a href="#" class="nav-mobile hidden-element">&#x2630; Menu</a>
                 <ul class="nav-list">
-                    <li class="nav-link">nav-item-1</li>
-                    <li class="nav-link">nav-item-2</li>
-                    <li class="nav-link">nav-item-3</li>
+                    <li class="nav-link">
+                        <a href="products">Products</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="usp">Why Futsal Factory?</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="form">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <div>outer div
-            <h1 class="hidden-element">Futsal Factory Webshop</h1>
-            <section>products section</section>
+        
+        <h1 class="hidden-element">Futsal Factory Webshop</h1>
+        <section id="products">
+            <div class="product-item spotlight">In the spotlights</div>
+            <div class="product-item">Bestseller</div>
+            <div class="product-item">Sale of the week</div>
+            <div class="product-item">Soon available</div>
+        </section>
+        
+        <main id="maincontent" tabindex="-1">
+            <section id="usp">
+                <h2 class="hidden-element">Our Unique Selling Points</h2>
+                <article class="usp-article">article-1</article>
+                <article class="usp-article">article-2</article>
+                <article class="usp-article">article-3</article>
+                <article class="usp-article">article-4</article>
+            </section>
+        </main>
+        
+        <div class="interactive">
             <aside id="video">video aside</aside>
-            <main id="maincontent" tabindex="-1">main part
-                <section>usp section
-                    <h2 class="hidden-element">Our Unique Selling Points</h2>
-                    <article>article-1</article>
-                    <article>article-2</article>
-                    <article>article-3</article>
-                    <article>article-4</article>
-                </section>
-            </main>
             <form id="form">form</form>
         </div>
+        
         <footer>footer</footer>
     </div>
 </body>

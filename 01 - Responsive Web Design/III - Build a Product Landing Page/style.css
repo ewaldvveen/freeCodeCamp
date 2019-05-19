@@ -30,7 +30,6 @@
   color: var(--color-txt-light);
 }
 
-
 /* General styles for the whole page */
 html {
   font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
@@ -55,6 +54,11 @@ h3 {
   font-size: var(--font-size-l);
 }
 
+ul {
+  list-style-type: none;
+}
+
+/*
 div,
 img,
 ul,
@@ -64,10 +68,13 @@ section,
 footer {
   border: 0.1rem solid red;
 }
+*/
 
 /* Header */
 #header {
   display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 #header * {
@@ -75,7 +82,17 @@ footer {
 }
 
 #header-img {
-  background-color: var(--color-primary);
+  margin: 2rem 2rem 0 2rem;
+}
+
+#header-img > picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-img > picture > img {
+  max-width: 66vw;
 }
 
 #nav-bar {
@@ -84,15 +101,67 @@ footer {
 
 .nav-list {
   display: flex;
+  text-align: center;
 }
 
-.nav-link {
-  background-color: var(--color-secundary);
+.nav-list a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  color: var(--color-txt-light);
+  background-position: 100%;
+}
+
+.nav-list a:link, .nav-list a:visited {
+  text-align: center;                
+  padding: 1rem 2rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-secundary) 50%);
+  background-size: 220%;
+  transition: all .4s;
 }
 
 .nav-mobile {
   font-size: 2.4rem;
   color: var(--color-tertiairy);
+}
+
+/* Products section */
+#products {
+  display: flex;
+  background-color: var(--color-tertiairy);
+}
+
+.product-item {
+  flex: 1;
+  background-color: var(--color-grey);
+}
+
+.spotlight {
+  background-color: var(--color-txt-light);
+}
+
+/* USP section */
+#usp {
+  display: flex;
+  background-color: var(--color-primary);
+}
+
+.usp-article {
+  flex: 1;
+  background-color: var(--color-tertiairy);
+}
+
+/* Video and form (interactive) part */
+.interactive {
+  display: flex;
+}
+
+.interactive > * {
+  flex: 1;
+  background-color: var(--color-secundary);
 }
 
 /* Styles for hiding parts of the page */
@@ -139,6 +208,19 @@ top: 0;
 @media all and (max-width: 64em) {
   #header {
     flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-bar {
+    min-width: 66vw;
+  }
+
+  #products, #usp, .interactive {
+    flex-wrap: wrap;
+  }
+
+  .product-item, .usp-article {
+    flex-basis: 50%;
   }
 }
 
@@ -146,6 +228,10 @@ top: 0;
 @media all and (max-width: 25.875em) {
   #header > * {
     order: 9999;
+  }
+
+  #header-img > picture > img {
+    max-width: 66vw;
   }
 
   #nav-bar {
@@ -164,10 +250,8 @@ top: 0;
     position: relative;
     width: auto;
   }
-}
 
-@media all and (min-width: 25.875em) {
-  .nav-list {
-    display: flex !important;
+  .product-item, .usp-article, .interactive > * {
+    flex-basis: 100%;
   }
 }
