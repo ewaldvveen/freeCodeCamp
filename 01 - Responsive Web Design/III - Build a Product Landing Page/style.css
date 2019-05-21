@@ -11,7 +11,7 @@
   /* fonts */
   --font-size-xxl: 4.8rem;
   --font-size-xl: 3.6rem;
-  --font-size-l: 2.8rem;
+  --font-size-l: 2.4rem;
   --font-size-medium: 1.6rem;
 }
 
@@ -77,28 +77,23 @@ footer {
 /* Header */
 #header {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
   margin-bottom: 2rem;
 }
 
-#header * {
-  flex: 3;
-}
-
 #header-img {
+  flex-shrink: 10;
   margin: 2rem 2rem 0 2rem;
 }
 
 #header-img > picture > img {
-  max-width: 66vw;
-}
-
-#nav-bar {
-  flex: 2;
+  max-width: 58vw;
 }
 
 .nav-list {
   display: flex;
+  justify-content: space-evenly;
   text-align: center;
 }
 
@@ -117,6 +112,7 @@ footer {
   padding: 1rem 2rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-secundary) 50%);
   background-size: 220%;
+  border-radius: 0.5rem;
   transition: all .4s;
 }
 
@@ -128,16 +124,26 @@ footer {
 /* Products section */
 #products {
   display: flex;
-  background-color: var(--color-tertiairy);
+}
+
+#products > .spotlight {
+  border: 1px solid var(--color-secundary);
 }
 
 .product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40rem;
   flex: 1;
-  background-color: var(--color-grey);
+  border: 1px solid var(--color-tertiairy);
+  border-radius: 0.6rem;
+  margin: 0 1rem;
 }
 
-.spotlight {
-  background-color: var(--color-txt-light);
+.product-item img {
+  width: 20vw;
 }
 
 /* USP section */
@@ -210,6 +216,7 @@ top: 0;
 
   #nav-bar {
     min-width: 66vw;
+    margin-top: 2rem;
   }
 
   .nav-list a:hover {
@@ -226,15 +233,18 @@ top: 0;
 
   #products, #usp, .interactive {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .product-item, .usp-article {
-    flex-basis: 50%;
+    flex-basis: 33%;
+    max-width: 40vw;
+    margin: 2rem;
   }
 }
 
-/* phones: 25.875 * 16 = 414px */
-@media all and (max-width: 25.875em) {
+/* phones: 35.5 * 16 = 568px */
+@media all and (max-width: 35.5em) {
   #header > * {
     order: 9999;
   }
@@ -244,6 +254,7 @@ top: 0;
     flex-direction: column;
     align-items: center;
     order: 1;
+    margin: 0;
   }
 
   #nav-bar > * {
@@ -283,5 +294,13 @@ top: 0;
 
   .product-item, .usp-article, .interactive > * {
     flex-basis: 100%;
+  }
+}
+
+/* In case of rotating the phone from portrait to landscape
+(and the other way around). */
+@media (orientation: landscape) {
+  .nav-list {
+    display: flex;
   }
 }
