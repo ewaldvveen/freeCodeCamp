@@ -32,7 +32,7 @@
 
 /* General styles for the whole page */
 html {
-  font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 62.5%;
 }
 
@@ -60,6 +60,11 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.txt-xl {
+  font-size: 11rem;
+  font-weight: lighter;
 }
 
 /*
@@ -127,35 +132,41 @@ footer {
   justify-content: space-evenly;
 }
 
-#products > .spotlight {
-  border: 1px solid var(--color-secundary);
-}
-
 .product-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-basis: 22%;
   height: 40rem;
-  border: 1px solid var(--color-tertiairy);
-  border-radius: 0.6rem;
 }
 
 .product-item {
-  height: 27rem;
-  flex-basis: 90%;
+  flex-basis: 100%;
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
 
+.product-item > .spotlight {
+  border: 1px solid var(--color-secundary);
+}
+
 .product-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 40rem;
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
   backface-visibility: hidden;
   transition: all 1s ease;
+  border: 1px solid var(--color-tertiairy);
+  border-radius: 0.6rem;
+}
+
+.product-card > h3 {
+  margin-bottom: 2rem;
 }
 
 .product-item:hover .card-front {
@@ -170,16 +181,30 @@ footer {
   background-color: var(--color-txt-light);
 }
 
-.card-front > h3 {
-  margin-bottom: 2rem;
-}
-
 .card-back {
   background-color: var(--color-secundary);
   color: var(--color-txt-light);
   transform: rotateY(180deg);
 }
 
+.card-back-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+.card-back-info > ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.card-back-price {
+  line-height: 0.9;
+  margin-bottom: 3rem;
+}
 
 .product-card img {
   width: 20vw;
