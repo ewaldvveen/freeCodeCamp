@@ -250,9 +250,55 @@ footer {
   display: flex;
 }
 
-.interactive > * {
-  flex: 1;
+.interactive {
   background-color: var(--color-secundary);
+}
+
+#video {
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem;
+  padding: 4rem;
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  border: 1rem solid var(--color-txt-light);
+}
+
+.video-wrapper h3 {
+  color: var(--color-txt-light);
+  font-size: var(--font-size-l);
+  margin-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+  border: 1px solid var(--color-txt-light);
+  box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rem;
+  padding: 4rem;
+  background-color: var(--color-txt-light);
+  border-radius: 0.5rem;
+  border: 1rem solid var(--color-primary);
+}
+
+#form label {
+  display: flex;
+}
+
+#form input {
+  flex: 1;
+  margin-left: .5rem;
 }
 
 /* Styles for hiding parts of the page */
