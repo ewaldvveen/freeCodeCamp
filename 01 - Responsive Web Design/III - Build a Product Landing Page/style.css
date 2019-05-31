@@ -1,12 +1,11 @@
 /* Defining CSS variables, globally scoped */
 :root {
   /* colors */
-  --color-primary: #c0b283;
-  --color-secundary: #dcd0c0;
-  --color-tertiairy: #f4f4f4;
-  --color-grey: #373737;
-  --color-txt-dark: #333333;
-  --color-txt-light: #ffffff;
+  --color-primary: #18121e;
+  --color-secundary: #984b43;
+  --color-tertiairy: #eac67a;
+  --color-grey: #233237;
+  --color-txt-light: #eeeeee;
 
   /* fonts */
   --font-size-xxl: 4.8rem;
@@ -26,7 +25,7 @@
 }
 
 *::selection {
-  background: var(--color-primary);
+  background: var(--color-tertiairy);
   color: var(--color-txt-light);
 }
 
@@ -39,7 +38,8 @@ html {
 body {
   box-sizing: border-box;
   font-size: var(--font-size-medium);
-  color: var(--color-txt-dark);
+  color: var(--color-primary);
+  background-color: var(--color-txt-light);
 }
 
 h1 {
@@ -48,7 +48,6 @@ h1 {
 
 h2 {
   font-size: var(--font-size-xxl);
-  color: var(--color-primary);
   text-align: center;
   margin-top: 8rem;
 }
@@ -136,13 +135,17 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: var(--color-grey);
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-secundary);
+}
+
+#products h2 {
+  color: var(--color-txt-light);
 }
 
 .product-collection {
   display: flex;
   justify-content: space-evenly;
-  margin: 4rem 0 12rem;
+  margin: 4rem 0 4rem;
 }
 
 .product-wrapper {
@@ -158,9 +161,8 @@ footer {
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
-
 .product-item > .spotlight {
-  border: 1px solid var(--color-secundary);
+  border: 2px solid var(--color-tertiairy);
 }
 
 .product-card {
@@ -175,14 +177,19 @@ footer {
   text-align: center;
   backface-visibility: hidden;
   transition: all 1s ease;
-  border: 1px solid var(--color-tertiairy);
+  border: 2px solid var(--color-secundary);
   border-radius: 0.6rem;
   box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15);
   transition: all 1s ease;
 }
 
 .product-card > h3 {
+  color: var(--color-grey);
   margin-bottom: 2rem;
+}
+
+.product-card > * {
+  color: var(--color-grey);
 }
 
 .product-item:hover .card-front {
@@ -198,13 +205,20 @@ footer {
 }
 
 .card-back {
-  background-color: var(--color-tertiairy);
-  color: var(--color-txt-light);
+  background-color: var(--color-secundary);
   transform: rotateY(180deg);
 }
 
+.product-card.card-back > * {
+  color: var(--color-txt-light);
+}
+
 .card-back.spotlight {
-  background-color: var(--color-secundary);
+  background-color: var(--color-tertiairy);
+}
+
+.card-back.spotlight > * {
+  color: var(--color-grey);
 }
 
 .card-back-info {
@@ -230,6 +244,22 @@ footer {
   margin-bottom: 2rem;
 }
 
+.btn {
+  margin-bottom: 8rem;
+  padding: 1rem 2rem;
+}
+
+.btn a {
+  font-size: var(--font-size-l);
+  color: var(--color-txt-light);
+  cursor: not-allowed;
+  border: 1px solid var(--color-txt-light);
+}
+
+.nav-list.btn a:link, .nav-list.btn a:visited {
+  padding: 2rem 4rem;
+}
+
 /* USP section */
 #usp {
   display: flex;
@@ -249,7 +279,7 @@ footer {
 }
 
 .usp-article svg {
-  fill: var(--color-primary);
+  fill: var(--color-secundary);
   width: 8rem;
 }
 
@@ -277,17 +307,17 @@ footer {
 
 .video-channel {
   flex-basis: 40%;
-  margin: 8rem 0 12rem;
+  margin: 8rem 0 8rem;
   padding: 4rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiairy);
   border-radius: 0.5rem;
   border: 1rem solid var(--color-txt-light);
 }
 
 .video-channel h3 {
-  color: var(--color-txt-light);
+  color: var(--color-grey);
   font-size: var(--font-size-l);
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .video-wrapper {
