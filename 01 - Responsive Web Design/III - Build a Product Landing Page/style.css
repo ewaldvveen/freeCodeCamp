@@ -12,6 +12,7 @@
   --font-size-xl: 3.6rem;
   --font-size-l: 2.4rem;
   --font-size-medium: 1.6rem;
+  --font-size-small: 1.2rem;
 }
 
 /* CSS reset */
@@ -90,12 +91,12 @@ footer {
   margin-bottom: 2rem;
 }
 
-#header-img {
+.header-img {
   flex-shrink: 10;
   margin: 2rem 2rem 0 2rem;
 }
 
-#header-img > picture > img {
+.header-img > picture > img {
   max-width: 58vw;
 }
 
@@ -180,7 +181,6 @@ footer {
   border: 2px solid var(--color-secundary);
   border-radius: 0.6rem;
   box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15);
-  transition: all 1s ease;
 }
 
 .product-card > h3 {
@@ -298,7 +298,7 @@ footer {
   align-items: center
 }
 
-#video {
+.interactive aside {
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -327,7 +327,7 @@ footer {
   height: 0;
 }
 
-.video-wrapper iframe {
+#video {
   position: absolute;
 	top: 0;
 	left: 0;
@@ -388,20 +388,60 @@ footer {
 
 #form input, #form select {
   margin: .8rem 0;
-  padding: 4px 0;
+  padding: 4px 2px;
   font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
   color: var(--color-txt-light);
   outline: 0;
   background-color: var(--color-grey);
+  transition: all 1s ease;
 }
 
-#form button {
+#form input:hover {
+  background-color: var(--color-secundary);
+  border-radius: 2px;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: var(--color-txt-light);
+}
+
+.form-btn {
   font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
   color: var(--color-txt-light);
   font-size: var(--font-size-l);
   background-color: var(--color-secundary);
   cursor: pointer;
   flex-basis: 20rem;
+  transition: all .8s ease;
+}
+
+.form-btn:hover {
+  color: var(--color-secundary);
+  background-color: var(--color-tertiairy);
+}
+
+/* footer */
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer, footer > h3 {
+  font-size: var(--font-size-small);
+}
+
+footer a, footer a:visited {
+  color: var(--color-secundary);
+  transition: all .2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  padding: 2px 4px;
+  border-radius: 1px;
+  background-color: var(--color-secundary);
+  color: var(--color-txt-light);
+  display: inline-block;
+  transform: rotate(5deg);
 }
 
 /* Styles for hiding parts of the page */
@@ -481,7 +521,7 @@ top: 0;
     flex: 1 1 50%;
   }
 
-  #video {
+  .interactive aside {
     flex-basis: 100%;
   }
 
@@ -531,11 +571,11 @@ top: 0;
     color: var(--color-txt-light);
   }
 
-  .nav-link {
+  .nav-item {
     margin: 1rem 0;
   }
 
-  .nav-link a {
+  .nav-link {
     color: var(--color-txt-light);
   }
 
