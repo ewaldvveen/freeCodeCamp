@@ -432,10 +432,10 @@ footer, footer > h3 {
 footer a, footer a:visited {
   color: var(--color-secundary);
   transition: all .2s ease;
+  text-decoration: underline;
 }
 
 footer a:hover {
-  text-decoration: underline;
   padding: 2px 4px;
   border-radius: 1px;
   background-color: var(--color-secundary);
